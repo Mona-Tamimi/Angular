@@ -8,6 +8,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProductComponent } from './product/product.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductComponent } from './product/product.component';
     SignUpComponent,
     SignInComponent,
     CategoriesComponent,
-    ProductComponent
+    ProductComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

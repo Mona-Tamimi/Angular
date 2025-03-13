@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SerService } from '../ser.service';
 
 @Component({
   selector: 'app-categories',
@@ -8,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class CategoriesComponent {
 
+
+  categories: any[] = [];
+  constructor(private _service: SerService) { }
+
+  ngOnInit() {
+    this.getData();
+  }
+
+  getData() {
+    this._service.getCategories().subscribe(data => {
+      this.categories = data;
+    })
+  }
 }

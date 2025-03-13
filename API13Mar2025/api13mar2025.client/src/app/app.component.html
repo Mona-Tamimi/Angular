@@ -1,0 +1,8 @@
+<h1>User List</h1>
+<ul>
+  <li *ngFor="let user of users">{{ user.name }} - {{ user.email }}</li>
+</ul>
+
+<h2>Single User</h2>
+<p *ngIf="user">Name: {{ user.name }}</p>
+<p *ngIf="user">Email: {{ user.email }}</p>

@@ -1,30 +1,17 @@
 <p>products!</p>
 
-<br />
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">one</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <!--<a routerLink="/product" class="btn btn-primary">Go somewhere</a>-->
+<section class="container my-5" *ngFor="let product of products">
+  <div class="card shadow-sm p-4">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{product.img}}" alt="Product Image" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-3">{{product.name}}</h2>
+        <p class="text-muted">{{product.description}}</p>
+        <h4 class="text-success">${{product.price}}</h4>
+        <a [routerLink]="['/singleProduct', product.id]" class="btn btn-primary mt-3">Details</a>
+      </div>
+    </div>
   </div>
-</div>
-
-<br />
-
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">two</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <!--<a routerLink="/product" class="btn btn-primary">Go somewhere</a>-->
-  </div>
-</div>
-
-<br />
-
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">three</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <!--<a routerLink="/product" class="btn btn-primary">Go somewhere</a>-->
-  </div>
-</div>
+</section>
