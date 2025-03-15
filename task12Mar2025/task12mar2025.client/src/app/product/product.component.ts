@@ -11,21 +11,28 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductComponent {
 
+  product: any[] = [];
 
-  products: any[] = [];
-  categoryId: any;
-  constructor(private _service: SerService, private _active: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private apiService: SerService) { }
 
-  ngOnInit() {
-    this.getData();
+  ngOnInit(): void {
+    const productId = this.route.snapshot.paramMap.get('id');
+    if (productId) {
+      this.fetchProductById(productId);
+    }
   }
 
-  getData() {
-    this.categoryId = this._active.snapshot.paramMap.get("id");
-
-    this._service.getProducts(this.categoryId).subscribe((data) => {
-
-      this.products = data.filter((p: any) => p.categoryID == this.categoryId)
-    })
+  fetchProductById(categoryId: string) {
+    this.apiService.getProductsByCategory(categoryId).subscribe(
+      (data) => {
+        this.product = data || [];
+        console.log('Products in Category:', this.product);
+      },
+      (error) => {
+        console.error('Error fetching products:', error);
+        this.product = [];
+      }
+    );
   }
+
 }

@@ -1,12 +1,9 @@
 <p>Product details!</p>
-
 <br />
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">one</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <!--<a routerLink="/product" class="btn btn-primary">Go somewhere</a>-->
-  </div>
+<div class="container">
+  <h2>Product Details</h2>
+  <p><strong>Name:</strong> {{ product.name }}</p>
+  <p><strong>Description:</strong> {{ product.description }}</p>
+  <p><strong>Price:</strong> ${{ product.price }}</p>
+  <a routerLink="/Categories" class="btn btn-primary">Back to Categories</a>
 </div>
-
-<br />

@@ -9,17 +9,22 @@ import { SerService } from '../ser.service';
 })
 export class CategoriesComponent {
 
-
   categories: any[] = [];
-  constructor(private _service: SerService) { }
+  constructor(private apiService: SerService) { }
 
-  ngOnInit() {
-    this.getData();
+  ngOnInit(): void {
+    this.fetchAllUsers();
   }
 
-  getData() {
-    this._service.getCategories().subscribe(data => {
-      this.categories = data;
-    })
+  fetchAllUsers() {
+    this.apiService.getAllUsers().subscribe(
+      (data) => {
+        this.categories = data;
+        console.log('All Users:', this.categories);
+      },
+      (error) => {
+        console.error('Error fetching users:', error);
+      }
+    );
   }
 }

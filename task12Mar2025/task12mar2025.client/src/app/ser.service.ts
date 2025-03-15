@@ -6,21 +6,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SerService {
-
-  private categoriesUrl = "https://67cd64b6dd7651e464ee3d63.mockapi.io/categories";
-  private productsUrl = "https://67cd64b6dd7651e464ee3d63.mockapi.io/products";
-
+  private apiUrl = 'https://67cd64b6dd7651e464ee3d63.mockapi.io/categories';
+  private apiUrlProduct = 'https://67cd64b6dd7651e464ee3d63.mockapi.io/products';
   constructor(private http: HttpClient) { }
 
-  getCategories(): Observable<any[]> {
-    return this.http.get<any[]>(this.categoriesUrl);
+  getAllUsers(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
 
-  getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(this.productsUrl);
+  getProductsByCategory(categoryId: string) {
+    return this.http.get<any[]>(`${this.apiUrlProduct}?categoryId=${categoryId}`);
   }
 
-  getProductsById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.productsUrl}/${id}`);
+  getProductById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrlProduct}/${id}`);
   }
 }

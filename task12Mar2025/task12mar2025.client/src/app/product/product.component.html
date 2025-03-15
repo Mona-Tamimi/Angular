@@ -1,17 +1,15 @@
 <p>products!</p>
 
-<section class="container my-5" *ngFor="let product of products">
-  <div class="card shadow-sm p-4">
-    <div class="row">
-      <div class="col-md-6">
-        <img src="{{product.img}}" alt="Product Image" class="img-fluid rounded">
-      </div>
-      <div class="col-md-6">
-        <h2 class="mb-3">{{product.name}}</h2>
-        <p class="text-muted">{{product.description}}</p>
-        <h4 class="text-success">${{product.price}}</h4>
-        <a [routerLink]="['/singleProduct', product.id]" class="btn btn-primary mt-3">Details</a>
-      </div>
+<div class="row" *ngIf="product.length > 0; else noProducts">
+  <div class="card" *ngFor="let item of product" style="width: 18rem;">
+    <div class="card-body">
+      <img [src]="item.avatar" alt="Alternate Text" />
+      <h5 class="card-title">{{ item.name }}</h5>
+      <a [routerLink]="['/ProductDetails', item.id]" class="card-link">See Details</a>
     </div>
   </div>
-</section>
+</div>
+
+<ng-template #noProducts>
+  <p class="text-center text-danger">No products available for this category.</p>
+</ng-template>
