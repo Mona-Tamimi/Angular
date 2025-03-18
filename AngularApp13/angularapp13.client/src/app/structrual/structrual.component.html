@@ -1,0 +1,23 @@
+<p>structrual works!</p>
+
+
+<p *ngIf="display">helloo hala</p>    <!--appear-->
+<p>helloo omar</p>
+
+<hr />
+<h2>*ngFor</h2>
+
+<div *ngFor="let item of users">
+  <p>{{item.name}}  , {{item.id}}</p>
+</div>
+
+<hr />
+<h2>Switch</h2>
+
+<div [ngSwitch]="color">
+
+  <p *ngSwitchCase="'red'">hello red </p>
+  <p *ngSwitchCase="'blue'">hello blue </p>
+  <p *ngSwitchDefault>hello Default </p>
+</div>
+

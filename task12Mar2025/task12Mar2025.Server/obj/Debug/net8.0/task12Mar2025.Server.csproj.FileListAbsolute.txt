@@ -37,3 +37,4 @@ C:\Users\Orange\Desktop\angular\task12Mar2025\task12Mar2025.Server\obj\Debug\net
 C:\Users\Orange\Desktop\angular\task12Mar2025\task12Mar2025.Server\obj\Debug\net8.0\task12Mar2025.Server.pdb
 C:\Users\Orange\Desktop\angular\task12Mar2025\task12Mar2025.Server\obj\Debug\net8.0\task12Mar2025.Server.genruntimeconfig.cache
 C:\Users\Orange\Desktop\angular\task12Mar2025\task12Mar2025.Server\obj\Debug\net8.0\ref\task12Mar2025.Server.dll
+C:\Users\Orange\Desktop\angular\task12Mar2025\task12Mar2025.Server\obj\Debug\net8.0\task12Mar2025.Server.sourcelink.json

@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "duCm5VdL4SsVqjrjqpZzb9hKrfGKPOFfiv2AeeJgMGs=",
+  "Source": "AngularApp13.Server",
+  "BasePath": "_content/AngularApp13.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Orange\\Desktop\\Angular\\AngularApp13\\angularapp13.client\\angularapp13.client.esproj",
+      "Version": 2,
+      "Source": "angularapp13.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -4,12 +4,30 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProductComponent } from './product/product.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { DashboardComponent } from './Admin/dashboard/dashboard.component';
+import { GetCategoryComponent } from './Admin/get-category/get-category.component';
+import { GetProductComponent } from './Admin/get-product/get-product.component';
+import { AddCategoryComponent } from './Admin/add-category/add-category.component';
+import { AddProductComponent } from './Admin/add-product/add-product.component';
 
 const routes: Routes = [
   { path: 'signIn', component: SignInComponent },
   { path: 'signUp', component: SignUpComponent },
   { path: 'categories', component: CategoriesComponent },
-  { path: 'product', component: ProductComponent }
+  { path: 'product', component: ProductComponent },
+  
+  {
+    path: "dashBoard", component: DashboardComponent, children: [
+
+      { path: "getCategory", component: GetCategoryComponent },
+      { path: "getProduct", component: GetProductComponent },
+      { path: "addCategory", component: AddCategoryComponent },
+      { path: "addProduct", component: AddProductComponent }
+
+
+
+     ]
+  }
 ];
 
 @NgModule({
