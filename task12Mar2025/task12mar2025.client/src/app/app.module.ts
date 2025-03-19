@@ -15,6 +15,11 @@ import { AddProductComponent } from './Admin/add-product/add-product.component';
 import { GetProductComponent } from './Admin/get-product/get-product.component';
 import { GetCategoryComponent } from './Admin/get-category/get-category.component';
 import { DashboardComponent } from './Admin/dashboard/dashboard.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
+import { EditCategoryComponent } from './Admin/edit-category/edit-category.component';
+import { EditProductComponent } from './Admin/edit-product/edit-product.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +33,11 @@ import { DashboardComponent } from './Admin/dashboard/dashboard.component';
     AddProductComponent,
     GetProductComponent,
     GetCategoryComponent,
-    DashboardComponent
+    DashboardComponent,
+    ChildComponent,
+    ParentComponent,
+    EditCategoryComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

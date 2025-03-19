@@ -45,4 +45,22 @@ export class UrlService {
   getProducts(): Observable<any> {
     return this._http.get<any>("https://67cd64b6dd7651e464ee3d63.mockapi.io/products");
   }
+
+  updateCategory(id: any, data: any) {
+    return this._http.put(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`, data)
+  }
+
+
+  getCategoryByCategoryId(id: any) {
+    return this._http.get(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`)
+  }
+
+  updateProduct(id: any, data: any) {
+    return this._http.put(`https://67cd64b6dd7651e464ee3d63.mockapi.io/products/${id}`, data)
+  }
+
+
+  getProductById(id: any) {
+    return this._http.get(`https://67cd64b6dd7651e464ee3d63.mockapi.io/products/${id}`)
+  }
 }

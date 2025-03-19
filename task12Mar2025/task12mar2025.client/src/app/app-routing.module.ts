@@ -9,12 +9,18 @@ import { GetCategoryComponent } from './Admin/get-category/get-category.componen
 import { GetProductComponent } from './Admin/get-product/get-product.component';
 import { AddCategoryComponent } from './Admin/add-category/add-category.component';
 import { AddProductComponent } from './Admin/add-product/add-product.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { EditCategoryComponent } from './Admin/edit-category/edit-category.component';
+import { EditProductComponent } from './Admin/edit-product/edit-product.component';
 
 const routes: Routes = [
   { path: 'signIn', component: SignInComponent },
   { path: 'signUp', component: SignUpComponent },
   { path: 'categories', component: CategoriesComponent },
   { path: 'product', component: ProductComponent },
+  { path: "parent", component: ParentComponent },
+  { path: "child", component: ChildComponent },
   
   {
     path: "dashBoard", component: DashboardComponent, children: [
@@ -22,7 +28,10 @@ const routes: Routes = [
       { path: "getCategory", component: GetCategoryComponent },
       { path: "getProduct", component: GetProductComponent },
       { path: "addCategory", component: AddCategoryComponent },
-      { path: "addProduct", component: AddProductComponent }
+      { path: "addProduct", component: AddProductComponent },
+      { path: "editCategory/:id", component: EditCategoryComponent },
+      {path:"editProduct/:id", component: EditProductComponent}
+
 
 
 

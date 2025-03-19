@@ -8,6 +8,7 @@
       <th>Id</th>
       <th>Category Name</th>
       <th>Category Image</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
       <td>{{category.id}}</td>
       <td>{{category.name}}</td>
       <td>{{category.img}}</td>
+      <td> <a routerLink="/dashBoard/editCategory/{{category.id}}">Edit</a> </td>
     </tr>
   </tbody>
 </table>

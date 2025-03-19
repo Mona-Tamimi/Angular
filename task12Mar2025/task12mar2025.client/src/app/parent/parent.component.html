@@ -1,0 +1,6 @@
+<p>parent works!</p>
+
+<!-- Child component with event binding -->
+<app-child (dataEmitter)="receiveData($event)"></app-child>
+
+<p>Received Data: {{ receivedMessage }}</p>

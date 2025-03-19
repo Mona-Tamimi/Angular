@@ -1,0 +1,13 @@
+<p>edit-category works!</p>
+<form #update="ngForm" (ngSubmit)="updateCategory(update.value)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" class="form-control" [(ngModel)]="categoryContainer.name" name="name" ngModel>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Image</label>
+    <input type="text" class="form-control" [(ngModel)]="categoryContainer.img" name="img" ngModel>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
