@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UrlService } from './service/url.service';
 
 interface WeatherForecast {
   date: string;
@@ -15,24 +17,18 @@ interface WeatherForecast {
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  public forecasts: WeatherForecast[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private router: Router, private service: UrlService) { }
+  isLoggedIn: boolean = false;
 
   ngOnInit() {
-    this.getForecasts();
+    this.service.isLoggedIn$.subscribe(status => {
+      this.isLoggedIn = status;
+    });
   }
 
-  getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
-      (result) => {
-        this.forecasts = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+  logout() {
+    this.service.logout();
+    this.router.navigate(['/Login']);
   }
-
-  title = 'task12mar2025.client';
 }

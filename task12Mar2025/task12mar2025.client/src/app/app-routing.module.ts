@@ -13,6 +13,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { EditCategoryComponent } from './Admin/edit-category/edit-category.component';
 import { EditProductComponent } from './Admin/edit-product/edit-product.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: 'signIn', component: SignInComponent },
@@ -21,6 +22,8 @@ const routes: Routes = [
   { path: 'product', component: ProductComponent },
   { path: "parent", component: ParentComponent },
   { path: "child", component: ChildComponent },
+  { path: "Profile", component: ProfileComponent },
+
   
   {
     path: "dashBoard", component: DashboardComponent, children: [
