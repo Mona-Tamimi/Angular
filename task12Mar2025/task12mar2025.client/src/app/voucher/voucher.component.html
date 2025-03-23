@@ -1,0 +1,31 @@
+<p>voucher works!</p>
+<div class="container mt-4">
+  <div class="card shadow-lg">
+    <div class="card-header bg-dark text-white text-center">
+      <h3 class="mb-0">All Vouchers</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped table-hover text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Id</th>
+            <th>Voucher Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let voucher of Voucher; let i = index">
+            <td>{{voucher.id}}</td>
+            <td>{{voucher.name}}</td>
+            <td>{{voucher.price | currency}}</td>
+            <td>{{voucher.quantity}}</td>
+            <td><a routerLink="/editVoucher/{{voucher.id}}">Edit</a> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

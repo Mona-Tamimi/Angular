@@ -14,6 +14,9 @@ import { ChildComponent } from './child/child.component';
 import { EditCategoryComponent } from './Admin/edit-category/edit-category.component';
 import { EditProductComponent } from './Admin/edit-product/edit-product.component';
 import { ProfileComponent } from './profile/profile.component';
+import { VoucherComponent } from './voucher/voucher.component';
+import { AddVoucherComponent } from './add-voucher/add-voucher.component';
+import { EditVoucherComponent } from './edit-voucher/edit-voucher.component';
 
 const routes: Routes = [
   { path: 'signIn', component: SignInComponent },
@@ -23,6 +26,14 @@ const routes: Routes = [
   { path: "parent", component: ParentComponent },
   { path: "child", component: ChildComponent },
   { path: "Profile", component: ProfileComponent },
+  { path: "Voucher", component: VoucherComponent },
+  { path: "addVoucher", component: AddVoucherComponent },
+  { path: "editVoucher", component: EditCategoryComponent },
+  { path: "editVoucher/:id", component: EditVoucherComponent },
+
+
+
+
 
   
   {

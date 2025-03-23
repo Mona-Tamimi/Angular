@@ -21,6 +21,10 @@ import { EditCategoryComponent } from './Admin/edit-category/edit-category.compo
 import { EditProductComponent } from './Admin/edit-product/edit-product.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { Sun233Component } from './sun23-3/sun23-3.component';
+import { VoucherComponent } from './voucher/voucher.component';
+import { AddVoucherComponent } from './add-voucher/add-voucher.component';
+import { EditVoucherComponent } from './edit-voucher/edit-voucher.component';
 
 
 @NgModule({
@@ -41,7 +45,11 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     EditCategoryComponent,
     EditProductComponent,
     ProfileComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    Sun233Component,
+    VoucherComponent,
+    AddVoucherComponent,
+    EditVoucherComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

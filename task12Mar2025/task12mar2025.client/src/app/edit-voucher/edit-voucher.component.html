@@ -1,0 +1,22 @@
+<p>edit-voucher works!</p>
+<form #update="ngForm" (ngSubmit)="updateVoucher(update.value)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">ID</label>
+    <input type="text" class="form-control" [(ngModel)]="voucherContainer.id" name="id" ngModel>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" class="form-control" [(ngModel)]="voucherContainer.name" name="name" ngModel>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Price</label>
+    <input type="text" class="form-control" [(ngModel)]="voucherContainer.price" name="price" ngModel>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Quantity</label>
+    <input type="text" class="form-control" [(ngModel)]="voucherContainer.quantity" name="quantity" ngModel>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
